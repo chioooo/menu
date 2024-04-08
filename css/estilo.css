@@ -48,7 +48,7 @@ article {
     transition: transform 0.5s, color 0.5s, background-color 0.5s; /* Tiempo que demora el volteo */
     position: relative;
     border-radius: 30px;
-    margin-right: 10px;
+    margin: 10px;
     
 }
 
