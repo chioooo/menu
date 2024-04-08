@@ -108,7 +108,7 @@ article {
     width: 130px;
     height: 130px;
     border-radius: 100%;
-    border: 7px solid white;
+    border: 7px solid #F58E6C;
     position: absolute;
     top: 0; /* Pegar al borde superior del contenedor */
     left: 0;
