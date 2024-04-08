@@ -1,0 +1,129 @@
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    text-align: right;
+    display: flex;
+    background: #F5CBBD;
+}
+#bloque {
+    width: 1200px;
+    margin: 5% auto;
+    text-align: left;
+}
+header, section, footer, aside, nav, article{
+    display: block;
+}
+
+#seccion {
+    float: left;
+    width: 1200px;
+}
+article {
+    position: relative;
+    background:  #F58E6C;
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+/*  EFECTO DE VOLTEO */
+.efecto-volteo-container {
+    display: flex; /* Contenedor flexible */
+    align-items: center;
+}
+
+.efecto-volteo {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(31,25,47);
+    perspective: 1000px;
+    cursor: pointer; /* El cursor se posiciona como elemento interactivo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s, color 0.5s, background-color 0.5s; /* Tiempo que demora el volteo */
+    position: relative;
+    border-radius: 30px;
+    margin-right: 10px;
+    
+}
+
+.efecto-volteo::before {
+    content: attr(data-texto1); /* Asigna el texto1 */
+    position: absolute;
+    font: Arial;
+    font-size: 15pt;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.efecto-volteo:hover {
+    transform: rotateY(180deg); /* El contenedor gira 180° */
+    color: white;
+    background-color: #9cc0e9; /* Cambia el color */
+}
+
+.efecto-volteo:hover::before {
+    content: ''; /* Cambia el texto1 al texto2 */
+    transform: rotateY(180deg);
+    color: white;
+}
+
+.efecto-volteo a {
+    opacity: 0; /*chio: aqui se oculta el link*/
+    transition: opacity 0.5s ease-in-out;
+    transform: rotateY(180deg); /*Chio: aqui se revoltea pa que no se vea el texto inversamente*/
+    text-decoration: none;
+    color: white;
+    font: Arial;
+    font-size: 20pt;
+    font-weight: bold;
+  }
+  
+  .efecto-volteo:hover a {
+    opacity: 1;/*chio: aca se vuelve a ver el link*/
+    color: white;
+    font: Arial;
+    font-size: 20pt;
+    font-weight: bold;
+  }
+/*  */
+
+.titulo2 {
+    font-family: 'Lucida Sans';
+    font-size: 25px;
+    color: #F5766C;
+}
+.fotoperfil img{
+    width: 50px;
+    height: 0px;
+}
+.fotoperfil{
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    border: 7px solid white;
+    position: absolute;
+    top: 0; /* Pegar al borde superior del contenedor */
+    left: 0;
+    margin-left: 65px;
+    margin-top: -30%; /* Saca la foto del contenedor hacia arriba */
+}
+h2 {
+    text-align: center;
+    font-family: verdana;
+    font-style: bold;
+    font-size: 30pt;
+    color: #f2f7ad;
+    width: 100%;
+}
+
+p{
+    color: rgb(121, 121, 121);
+}
